@@ -1,13 +1,8 @@
 Rails.application.routes.draw do
+  resources :owners
   get 'cockpit/admin'
   get 'cockpit/user'
-  resources :loan_payments
-  resources :loans
   resources :loaners
-  resources :payouts
-  resources :contributions
-  resources :investors
-  devise_for :users
   root to: 'cockpit#admin'
 
   get 'pages/dashboard'
